@@ -1,6 +1,9 @@
 package Map;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -77,7 +80,57 @@ public class Populacao {
         System.out.println("\n=========");
 
         // Estado com a menor população
-        
-        
+
+        Collection<Integer> populacao = estados.values();
+
+        String maiorPopulacao = "";
+        String menorPopulacao = "";
+
+        for (Map.Entry<String, Integer> entry : estados.entrySet()) {
+            if (entry.getValue().equals(Collections.min(populacao)))
+                menorPopulacao = entry.getKey();
+            if (entry.getValue().equals(Collections.max(populacao)))
+                maiorPopulacao = entry.getKey();
+        }
+
+        System.out.println("Maior População: " + maiorPopulacao + Collections.max(populacao));
+        System.out.println("Menor População: " + menorPopulacao + Collections.min(populacao));
+        System.out.println("\n=========");
+
+        // Soma das Populações
+
+        Iterator<Integer> valorPopulacao = estados.values().iterator();
+        int soma = 0;
+
+        while (valorPopulacao.hasNext()) {
+            soma += valorPopulacao.next();
+        }
+
+        System.out.println("A soma das populações é de: " + soma);
+        System.out.println("\n=========");
+
+        // Média das Populações
+
+        int media = (soma / estados.size());
+        System.out.println("A média das populações é de: " + media);
+        System.out.println("\n=========");
+
+        // Removendo estados com População abaixo de 4,000,000
+
+        Iterator<Integer> iterator = estados.values().iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next() <= 4000000) {
+                iterator.remove();
+            }
+        }
+
+        System.out.println("Resultado das Remoções: " + estados);
+        System.out.println("\n=========");
+
+        // Apagando o Dicionário
+        estados.clear();
+
+        // Verificando se está vazio
+        System.out.println("A lista está vazia? " + estados.isEmpty());
     }
 }
