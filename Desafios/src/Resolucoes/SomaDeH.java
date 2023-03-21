@@ -10,19 +10,9 @@ import java.util.Scanner;
 public class SomaDeH {
     public static void main(String[] args) {
 
-        double h = 0.0;
-        Scanner sc = new Scanner(System.in);
+        double h = 0, n = new java.util.Scanner(System.in).nextDouble();
+       for (int i = 1; i <= n; h += (1.0 / i), i++);
+       System.out.println(Math.round(h));
         
-       
-        int n = sc.nextInt();
- 
-        for (int i = 1; i <= n; i++) {
- 
-            h += 1.0 / i;
- 
-        }
-
-        System.out.println(String.format("%.2f", h));
-        sc.close();
     }   
 }
