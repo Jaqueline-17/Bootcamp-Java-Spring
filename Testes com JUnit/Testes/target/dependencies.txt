@@ -1,0 +1,9 @@
+digraph "com.junit.testes:Testes:jar:3.9.1" { 
+	"com.junit.testes:Testes:jar:3.9.1" -> "junit:junit:jar:3.8.1:compile" ; 
+	"com.junit.testes:Testes:jar:3.9.1" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+	"org.junit.platform:junit-platform-engine:jar:1.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+	"org.junit.platform:junit-platform-engine:jar:1.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+ } 
