@@ -11,6 +11,16 @@ public class WelcomeController {
         return "Welcome to My Spring Boot Web API";
     }
 
+    @GetMapping("/usuario")
+    public String welcomeUser(){
+        return "Usuário Autorizado";
+    }
+
+    @GetMapping("/admin")
+    public String welcomeAdm(){
+        return "Administrador Autorizado";
+    }
+
     
     
 }
