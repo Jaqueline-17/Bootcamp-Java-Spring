@@ -21,6 +21,7 @@ Aprimorar minhas Hard Skills em Back-End voltado para Java, SpringBoot e suas Fe
 - Git e GitHub
 - Banco de Dados Relacional e NoSql
 - Java Collections
+- Estrutura de Dados em Java
 - Debugging em Java
 - API's REST
 - Swagger
